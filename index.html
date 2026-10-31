@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lantern: the smart home that keeps working when the internet doesn't</title>
+    <meta
+      name="description"
+      content="Lantern is a self-hosted smart home. Home Assistant on a Raspberry Pi, your own NAS, Matter, Thread and Wi-Fi devices from any vendor, all running inside your house. No big-tech cloud. Your home, your data, your rules."
+    />
+    <meta name="theme-color" content="#070b14" />
+    <meta property="og:title" content="Lantern" />
+    <meta property="og:description" content="The internet went down. Nobody noticed. A smart home that runs on hardware you own." />
+    <meta property="og:type" content="website" />
+    <link rel="preload" href="fonts/DSEG14Classic-Regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="fonts/barlow-v13-latin_latin-ext-regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="fonts/martian-mono-v6-latin-500.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true" focusable="false">
+      <defs>
+        <symbol id="i-play" viewBox="0 0 16 16"><path d="M3 2.5v11l10-5.5z" /></symbol>
+        <symbol id="i-cut" viewBox="0 0 16 16"><path d="M2 8h4M10 8h4M8 2v4M8 10v4" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" /><circle cx="8" cy="8" r="2" /></symbol>
+        <symbol id="i-router" viewBox="0 0 24 24"><rect x="3" y="13" width="18" height="7" rx="1.5" /><path d="M7 13V9M17 13V7M7 17h.01M11 17h.01" /></symbol>
+        <symbol id="i-switch" viewBox="0 0 24 24"><rect x="3" y="9" width="18" height="7" rx="1.5" /><path d="M6 12.5h.01M9 12.5h.01M12 12.5h.01M15 12.5h.01M18 12.5h.01" /></symbol>
+        <symbol id="i-pi" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="1.5" /><path d="M8 9h3v3H8zM13 9h3M13 12h3M8 15h8" /></symbol>
+        <symbol id="i-nas" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="1.5" /><path d="M8 7h8M8 11h8M8 15h8M12 18h.01" /></symbol>
+        <symbol id="i-sensor" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2" /><path d="M9 12h6M12 9v6" /></symbol>
+        <symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 3v5M15 3v5M7 8h10v4a5 5 0 0 1-10 0zM12 17v4" /></symbol>
+        <symbol id="i-tv" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="1.5" /><path d="M8 21h8M12 17v4" /></symbol>
+        <symbol id="i-camera" viewBox="0 0 24 24"><rect x="3" y="7" width="13" height="10" rx="2" /><path d="M16 11l5-3v8l-5-3z" /><circle cx="9" cy="12" r="2" /></symbol>
+        <symbol id="i-phone" viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2" /><path d="M11 18h2" /></symbol>
+        <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M7 18a4 4 0 0 1-.5-8A6 6 0 0 1 18 9a4.5 4.5 0 0 1-.5 9z" /></symbol>
+        <symbol id="i-lamp" viewBox="0 0 24 24"><path d="M9 3h6l3 8H6zM12 11v6M8 21h8M10 17h4" /></symbol>
+      </defs>
+    </svg>
+
+    <header class="topbar">
+      <div class="deck topbar__inner">
+        <a class="brand" href="#top" aria-label="Lantern, back to top">
+          <span class="seg" data-seg>LANTERN</span>
+          <span class="label">Self-hosted smart home</span>
+        </a>
+        <nav class="topnav" aria-label="Sections">
+          <a href="#why">Why</a>
+          <a href="#how">How</a>
+          <a href="#inside">Inside</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero deck" aria-labelledby="hook">
+        <div class="display">
+          <h1 class="hook" id="hook">
+            <span class="hook__line"><span class="seg" data-seg>THE INTERNET</span> <span class="seg" data-seg>WENT DOWN.</span></span>
+            <span class="hook__line"><span class="seg" data-seg>NOBODY</span> <span class="seg" data-seg>NOTICED.</span></span>
+          </h1>
+
+          <div class="hero__grid">
+            <div class="hero__copy">
+              <p>
+                <strong>Lantern is a smart home that runs on hardware inside your house.</strong>
+                A Raspberry Pi, your own NAS and devices from any vendor talk to each other
+                locally, with no big-tech cloud, no subscription and no lock-in in the way.
+                Your home, your data, your rules.
+              </p>
+              <div class="hero__keys">
+                <a class="key key--primary" href="#how"><svg aria-hidden="true"><use href="#i-play" /></svg>See how it works</a>
+                <a class="key" href="#inside">What's inside</a>
+              </div>
+            </div>
+
+            <div class="readouts" aria-label="Two homes during an internet outage, illustrative">
+              <div class="readout">
+                <div class="readout__title">
+                  <span class="label">Some other home</span>
+                  <span class="lantern-dot lantern-dot--off" aria-hidden="true"></span>
+                </div>
+                <div class="readout__clock">
+                  <span class="seg seg-7 is-blink" data-seg aria-label="12:00, blinking">12:00</span>
+                </div>
+                <dl class="readout__rows">
+                  <dt class="label">Lights</dt>
+                  <dd><span class="seg is-off" data-seg aria-label="no reading">----</span></dd>
+                  <dt class="label">Heating</dt>
+                  <dd><span class="seg is-off" data-seg aria-label="no reading">----</span></dd>
+                  <dt class="label">Camera</dt>
+                  <dd><span class="seg is-off" data-seg aria-label="no reading">----</span></dd>
+                </dl>
+                <div class="readout__status label">Waiting for the cloud</div>
+              </div>
+              <div class="readout">
+                <div class="readout__title">
+                  <span class="label">Lantern home</span>
+                  <span class="lantern-dot" aria-hidden="true"></span>
+                </div>
+                <div class="readout__clock">
+                  <span class="seg seg-7" data-seg id="clock" aria-live="off">00:00</span>
+                </div>
+                <dl class="readout__rows">
+                  <dt class="label">Lights</dt>
+                  <dd><span class="seg" data-seg>ON</span></dd>
+                  <dt class="label">Air</dt>
+                  <dd><span class="seg" data-seg>GOOD</span></dd>
+                  <dt class="label">Backup</dt>
+                  <dd><span class="seg" data-seg>OK</span></dd>
+                </dl>
+                <div class="readout__status label">Running locally</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ticker" aria-hidden="true">
+          <div class="label">
+            <span>Home Assistant</span><span>Raspberry Pi</span><span>Matter over Thread</span><span>Wi-Fi plugs</span><span>Your own NAS</span><span>VPN only</span><span>Four vendor ecosystems, one place</span><span>No cloud account required</span>
+            <span>Home Assistant</span><span>Raspberry Pi</span><span>Matter over Thread</span><span>Wi-Fi plugs</span><span>Your own NAS</span><span>VPN only</span><span>Four vendor ecosystems, one place</span><span>No cloud account required</span>
+          </div>
+        </div>
+      </section>
+
+      <hr class="rule" />
+
+      <section class="section deck" id="why" aria-labelledby="why-title">
+        <div class="section__head">
+          <h2 id="why-title">Your "smart" home phones home. Not to you.</h2>
+          <p>
+            Every big-tech platform routes your house through its servers and its ecosystem.
+            That works right up until it doesn't.
+          </p>
+        </div>
+
+        <div class="meters">
+          <article class="meter">
+            <div class="meter__readout">
+              <span class="seg" data-seg>4 APPS</span>
+            </div>
+            <h3>Lock-in, sold as convenience</h3>
+            <p>
+              A plug from one brand, a sensor from another, a camera from a third. Each one
+              wants its own app and its own account. <strong>Buy from someone else and it
+              doesn't speak to the rest.</strong>
+            </p>
+          </article>
+
+          <article class="meter">
+            <div class="meter__readout">
+              <span class="seg is-off" data-seg>OFFLINE</span>
+            </div>
+            <h3>The cloud hiccups, your lights stop listening</h3>
+            <p>
+              Your house should not depend on a server farm in another country to turn on a
+              lamp. <strong>When the cloud blinks, a cloud home blinks with it.</strong>
+            </p>
+          </article>
+
+          <article class="meter">
+            <div class="meter__readout">
+              <span class="seg" data-seg>UPLOADING</span>
+            </div>
+            <h3>There is no cloud. It's just someone else's computer.</h3>
+            <p>
+              Every temperature reading, every camera frame, every time you come home, sent to
+              a company that would like to know more about you. <strong>So why let it run your
+              house?</strong>
+            </p>
+          </article>
+
+          <article class="meter">
+            <div class="meter__readout">
+              <span class="seg is-off" data-seg>END OF LIFE</span>
+            </div>
+            <h3>When the company leaves, the devices die</h3>
+            <p>
+              Shut down the service and the hardware becomes plastic. <strong>You paid for a
+              device and got a subscription with an expiry date.</strong>
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <hr class="rule" />
+
+      <section class="section deck" id="how" aria-labelledby="how-title">
+        <div class="section__head">
+          <h2 id="how-title">Cut the internet. Watch what keeps working.</h2>
+          <p>
+            This is how Lantern runs: every device talks to a hub inside the house, and the
+            house only reaches the internet when you tell it to. Press the key and see the
+            difference. Drag to rotate, scroll to zoom, hover or tap any part.
+          </p>
+        </div>
+
+        <div class="stage" id="stage">
+          <div class="stage__view" id="stage-view">
+            <canvas id="house" tabindex="0" aria-label="Interactive 3D cutaway of a Lantern home. Use the part buttons below to read each component."></canvas>
+
+            <div class="stage__fallback" id="fallback" aria-hidden="true">
+              <svg viewBox="0 0 800 460" role="img" aria-label="Diagram of a Lantern home: devices connect to a local hub; the internet link can be cut">
+                <defs>
+                  <marker id="fa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5 0 10z" fill="#5fd3f3" /></marker>
+                </defs>
+                <g class="fb-house">
+                  <path d="M120 150 L400 60 L680 150 L680 400 L120 400 Z" fill="#0e1830" stroke="#2f6b7f" />
+                  <path d="M120 150 L400 60 L680 150" fill="none" stroke="#5fd3f3" stroke-width="1.5" />
+                  <path d="M120 150 L680 150" stroke="#1c2c3c" />
+                  <path d="M400 150 L400 400" stroke="#1c2c3c" />
+                </g>
+                <g id="fb-cloud">
+                  <path d="M700 40 a22 22 0 0 1 42 -8 a18 18 0 0 1 20 26 a14 14 0 0 1 -6 26 H690 a16 16 0 0 1 10 -44z" fill="#0b1322" stroke="#2f6b7f" stroke-dasharray="4 3" />
+                  <text x="738" y="112" fill="#93b9c7" font-family="Martian Mono, monospace" font-size="10" text-anchor="middle" letter-spacing="1">THE INTERNET</text>
+                  <path id="fb-link" d="M560 175 L700 70" stroke="#5fd3f3" stroke-width="1.5" />
+                </g>
+                <g font-family="Martian Mono, monospace" font-size="10" letter-spacing="1" fill="#dceff5">
+                  <rect x="120" y="310" width="170" height="70" fill="#0b1322" stroke="#5fd3f3" />
+                  <text x="205" y="332" text-anchor="middle">ROUTER</text>
+                  <text x="205" y="348" text-anchor="middle">SWITCH</text>
+                  <text x="205" y="364" text-anchor="middle">PI · HOME ASSISTANT</text>
+                  <rect x="120" y="250" width="170" height="40" fill="#0b1322" stroke="#2f6b7f" />
+                  <text x="205" y="275" text-anchor="middle">NAS · BACKUPS</text>
+                  <rect x="300" y="200" width="70" height="36" fill="#0b1322" stroke="#b48cff" />
+                  <text x="335" y="222" text-anchor="middle">AIR</text>
+                  <rect x="440" y="200" width="70" height="36" fill="#0b1322" stroke="#2f6b7f" />
+                  <text x="475" y="222" text-anchor="middle">TV</text>
+                  <rect x="560" y="200" width="70" height="36" fill="#0b1322" stroke="#2f6b7f" />
+                  <text x="595" y="222" text-anchor="middle">CAMERA</text>
+                  <rect x="440" y="300" width="70" height="36" fill="#0b1322" stroke="#2f6b7f" />
+                  <text x="475" y="322" text-anchor="middle">PLUG</text>
+                  <circle id="fb-lamp" cx="580" cy="330" r="12" fill="#f5a623" />
+                  <text x="580" y="362" text-anchor="middle">LAMP</text>
+                </g>
+                <g fill="none" stroke-width="1.5" marker-end="url(#fa)">
+                  <path d="M335 236 L250 320" stroke="#b48cff" />
+                  <path d="M475 236 L262 335" stroke="#5fd3f3" />
+                  <path d="M595 236 L262 340" stroke="#5fd3f3" />
+                  <path d="M440 318 L262 345" stroke="#5fd3f3" />
+                  <path d="M205 310 L205 292" stroke="#5fd3f3" />
+                </g>
+              </svg>
+            </div>
+
+            <div class="stage__legend" aria-hidden="true">
+              <span class="legend-item label"><i></i>Wi-Fi</span>
+              <span class="legend-item label"><i class="violet"></i>Thread</span>
+              <span class="legend-item label"><i class="dashed"></i>VPN</span>
+              <span class="legend-item label"><i class="amber"></i>The lantern</span>
+            </div>
+
+            <div class="slabels" id="slabels" aria-hidden="true"></div>
+            <div class="tooltip" id="tooltip" role="status" aria-live="polite"></div>
+
+            <div class="stage__line">
+              <span class="seg" id="stage-line" data-seg aria-live="polite">INTERNET: CONNECTED</span>
+            </div>
+          </div>
+
+          <div class="stage__panel">
+            <div class="stage__controls">
+              <button class="key key--amber" id="cut" type="button" aria-pressed="false">
+                <svg aria-hidden="true"><use href="#i-cut" /></svg>Cut the internet
+              </button>
+              <div class="mode-wrap">
+                <span class="label">Mode</span>
+                <div class="mode" role="group" aria-label="Simulation mode">
+                  <button class="key" type="button" data-mode="lantern" aria-pressed="true">Lantern</button>
+                  <button class="key" type="button" data-mode="bigtech" aria-pressed="false">Big-tech</button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="note parts-title">Parts of the house. Select one to read what it does.</div>
+              <ul class="parts" id="parts">
+                <li><button type="button" data-part="router" aria-pressed="false"><svg aria-hidden="true"><use href="#i-router" /></svg>Router</button></li>
+                <li><button type="button" data-part="switch" aria-pressed="false"><svg aria-hidden="true"><use href="#i-switch" /></svg>Switch</button></li>
+                <li><button type="button" data-part="pi" aria-pressed="false"><svg aria-hidden="true"><use href="#i-pi" /></svg>Raspberry Pi</button></li>
+                <li><button type="button" data-part="nas" aria-pressed="false"><svg aria-hidden="true"><use href="#i-nas" /></svg>NAS</button></li>
+                <li><button type="button" data-part="sensor" aria-pressed="false"><svg aria-hidden="true"><use href="#i-sensor" /></svg>Air sensor</button></li>
+                <li><button type="button" data-part="plug" aria-pressed="false"><svg aria-hidden="true"><use href="#i-plug" /></svg>Smart plug</button></li>
+                <li><button type="button" data-part="lamp" aria-pressed="false"><svg aria-hidden="true"><use href="#i-lamp" /></svg>Lamp</button></li>
+                <li><button type="button" data-part="tv" aria-pressed="false"><svg aria-hidden="true"><use href="#i-tv" /></svg>TV</button></li>
+                <li><button type="button" data-part="camera" aria-pressed="false"><svg aria-hidden="true"><use href="#i-camera" /></svg>Camera</button></li>
+                <li><button type="button" data-part="phone" aria-pressed="false"><svg aria-hidden="true"><use href="#i-phone" /></svg>Phone outside</button></li>
+                <li><button type="button" data-part="cloud" aria-pressed="false"><svg aria-hidden="true"><use href="#i-cloud" /></svg>The internet</button></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="rule" />
+
+      <section class="section deck" id="benefits" aria-labelledby="benefits-title">
+        <div class="section__head">
+          <h2 id="benefits-title">Six things the cloud can't sell you</h2>
+          <p>Not features on a roadmap. This is what running your own home gives you on day one.</p>
+        </div>
+
+        <div class="rows">
+          <article class="row">
+            <h3>Works when the internet goes down</h3>
+            <p>
+              Automations run on the Pi in your hallway, not on a server in Virginia.
+              <strong>Lights, heating, sensors: they keep going, and nobody at home notices
+              the outage.</strong>
+            </p>
+            <div class="row__readout">
+              <span class="label">Internet</span>
+              <span class="seg is-off" data-seg>OFF</span>
+              <span class="label">House</span>
+              <span class="seg is-amber" data-seg>ON</span>
+            </div>
+          </article>
+
+          <article class="row">
+            <h3>No Big Brother living in your house</h3>
+            <p>
+              Sensor readings, camera frames, the time you got home: <strong>all of it stays
+              inside the building.</strong> Nobody else's computer ever sees it.
+            </p>
+            <div class="row__readout">
+              <span class="label">Leaves the house</span>
+              <span class="seg" data-seg>NOTHING</span>
+            </div>
+          </article>
+
+          <article class="row">
+            <h3>Remote access through your own VPN</h3>
+            <p>
+              Checking the camera from the train? You come in through a tunnel you own.
+              <strong>Nothing is exposed to the internet, and there is no vendor relay in the
+              middle.</strong>
+            </p>
+            <div class="row__readout">
+              <span class="label">Exposed to the internet</span>
+              <span class="seg" data-seg>NOTHING</span>
+            </div>
+          </article>
+
+          <article class="row">
+            <h3>Mix any vendor. You choose what you connect.</h3>
+            <p>
+              Matter and Thread are open standards; Wi-Fi gear gets integrations. <strong>Four
+              different vendor ecosystems already live in one dashboard.</strong> Don't lock
+              yourself into one.
+            </p>
+            <div class="row__readout">
+              <span class="label">Ecosystems unified</span>
+              <span class="seg" data-seg>4</span>
+            </div>
+          </article>
+
+          <article class="row">
+            <h3>No subscriptions. Cheap, reusable hardware.</h3>
+            <p>
+              A Raspberry Pi, a NAS, a router. <strong>No monthly fee and no app that stops
+              working when the startup gets acquired.</strong>
+            </p>
+            <div class="row__readout">
+              <span class="label">Monthly fee</span>
+              <span class="seg" data-seg>NONE</span>
+            </div>
+          </article>
+
+          <article class="row">
+            <h3>Your data stays home, backed up on your own NAS</h3>
+            <p>
+              Every backup lands on a disk you can touch. <strong>Restore it without asking
+              anyone's permission.</strong>
+            </p>
+            <div class="row__readout">
+              <span class="label">Backup target</span>
+              <span class="seg" data-seg>YOUR NAS</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <hr class="rule" />
+
+      <section class="section deck" id="inside" aria-labelledby="inside-title">
+        <div class="section__head">
+          <h2 id="inside-title">What's actually in the rack</h2>
+          <p>
+            Lantern is built from a real, running setup. The parts are ordinary. The wiring is
+            the point.
+          </p>
+        </div>
+
+        <div class="inside">
+          <div>
+            <div class="schematic" role="img" aria-label="Signal chain: Wi-Fi devices and a Thread sensor connect to a router and a Thread border router, then through a switch to Home Assistant on a Raspberry Pi, which backs up to a NAS. A phone outside reaches in only through a VPN. The internet link is optional.">
+              <svg viewBox="0 0 960 400" aria-hidden="true">
+                <defs>
+                  <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="s-arrow" d="M0 0L10 5 0 10z" /></marker>
+                  <marker id="ar-t" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="s-arrow s-arrow--thread" d="M0 0L10 5 0 10z" /></marker>
+                  <marker id="ar-d" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="s-arrow s-arrow--dim" d="M0 0L10 5 0 10z" /></marker>
+                </defs>
+
+                <!-- devices column -->
+                <rect class="s-box" x="20" y="40" width="170" height="44" rx="3" />
+                <text class="s-text" x="36" y="60">Smart plugs</text>
+                <text class="s-text s-text--dim" x="36" y="75">Wi-Fi · local API</text>
+
+                <rect class="s-box" x="20" y="100" width="170" height="44" rx="3" />
+                <text class="s-text" x="36" y="120">TV · printer</text>
+                <text class="s-text s-text--dim" x="36" y="135">Wi-Fi · local control</text>
+
+                <rect class="s-box" x="20" y="160" width="170" height="44" rx="3" />
+                <text class="s-text" x="36" y="180">Camera</text>
+                <text class="s-text s-text--dim" x="36" y="195">Wi-Fi · local stream</text>
+
+                <rect class="s-box" x="20" y="250" width="170" height="44" rx="3" />
+                <text class="s-text" x="36" y="270">Air quality sensor</text>
+                <text class="s-text s-text--dim" x="36" y="285">Matter over Thread</text>
+
+                <!-- router -->
+                <rect class="s-box" x="290" y="100" width="150" height="64" rx="3" />
+                <text class="s-text" x="306" y="124">Router</text>
+                <text class="s-text s-text--dim" x="306" y="139">Wi-Fi · LAN</text>
+                <text class="s-text s-text--dim" x="306" y="153">VPN endpoint</text>
+
+                <!-- border router -->
+                <rect class="s-box" x="290" y="240" width="150" height="64" rx="3" />
+                <text class="s-text" x="306" y="264">Thread border</text>
+                <text class="s-text" x="306" y="279">router</text>
+                <text class="s-text s-text--dim" x="306" y="293">radio on the Pi</text>
+
+                <!-- switch -->
+                <rect class="s-box" x="500" y="100" width="120" height="64" rx="3" />
+                <text class="s-text" x="516" y="124">Switch</text>
+                <text class="s-text s-text--dim" x="516" y="139">wired LAN</text>
+
+                <!-- pi -->
+                <rect class="s-box s-box--hub" x="680" y="100" width="170" height="64" rx="3" />
+                <text class="s-text" x="696" y="124">Raspberry Pi</text>
+                <text class="s-text s-text--dim" x="696" y="139">Home Assistant</text>
+                <text class="s-seg" x="696" y="156">HUB</text>
+
+                <!-- nas -->
+                <rect class="s-box" x="680" y="240" width="170" height="64" rx="3" />
+                <text class="s-text" x="696" y="264">NAS</text>
+                <text class="s-text s-text--dim" x="696" y="279">backups · files</text>
+                <text class="s-text s-text--dim" x="696" y="293">monitoring</text>
+
+                <!-- internet -->
+                <rect class="s-box s-box--cloud" x="290" y="10" width="150" height="40" rx="3" />
+                <text class="s-text s-text--dim" x="306" y="35">The internet</text>
+
+                <!-- phone -->
+                <rect class="s-box" x="20" y="330" width="170" height="44" rx="3" />
+                <text class="s-text" x="36" y="350">Your phone, outside</text>
+                <text class="s-text s-text--dim" x="36" y="365">VPN tunnel only</text>
+
+                <!-- wires -->
+                <path class="s-wire" d="M190 62 C 240 62, 240 132, 290 132" marker-end="url(#ar)" />
+                <path class="s-wire" d="M190 122 C 240 122, 240 132, 290 132" marker-end="url(#ar)" />
+                <path class="s-wire" d="M190 182 C 240 182, 240 132, 290 132" marker-end="url(#ar)" />
+                <path class="s-wire s-wire--thread" d="M190 272 L 290 272" marker-end="url(#ar-t)" />
+                <path class="s-wire" d="M440 132 L 500 132" marker-end="url(#ar)" />
+                <path class="s-wire" d="M620 132 L 680 132" marker-end="url(#ar)" />
+                <path class="s-wire s-wire--thread" d="M440 272 C 560 272, 560 132, 680 132" marker-end="url(#ar-t)" />
+                <path class="s-wire" d="M765 164 L 765 240" marker-end="url(#ar)" />
+                <path class="s-wire s-wire--vpn" d="M190 352 C 260 352, 260 164, 320 164" marker-end="url(#ar)" />
+                <path class="s-wire s-wire--dim" d="M365 100 L 365 50" marker-end="url(#ar-d)" />
+
+                <text class="s-text s-text--dim" x="470" y="282">mesh hops</text>
+                <text class="s-text s-text--dim" x="780" y="210">backups</text>
+                <text class="s-text s-text--dim" x="200" y="322">encrypted, you own both ends</text>
+                <text class="s-text s-text--dim" x="380" y="80">optional</text>
+              </svg>
+            </div>
+            <p class="note dash__note">Illustrative diagram. Addresses, names and network details are deliberately absent.</p>
+          </div>
+
+          <div class="inside__copy">
+            <ul>
+              <li><strong>Home Assistant</strong> on a Raspberry Pi is the one dashboard and the one automation engine. Every device, whatever its brand, shows up here.</li>
+              <li><strong>Matter over Thread</strong> is handled locally: a Thread border router next to Home Assistant, so devices commission without a phone vendor's cloud in the loop.</li>
+              <li><strong>Wi-Fi devices</strong> are reached over the local network through their integrations. Four vendor ecosystems, one place.</li>
+              <li><strong>The NAS</strong> is where backups land and where the household's files live. A dead SD card is an inconvenience, not a loss.</li>
+              <li><strong>Remote access</strong> is a VPN tunnel and nothing else. No port is open to the internet. No vendor relays your traffic.</li>
+            </ul>
+            <p>
+              <strong>Honest footnote:</strong> Lantern is a concept built around a real home
+              network for a university course. It is not a product you can buy. The house in
+              the 3D scene is a stylised home, not anyone's actual apartment.
+            </p>
+
+            <div class="dash" aria-label="Illustrative Lantern dashboard">
+              <div class="dash__head">
+                <span class="label">Dashboard, illustrative</span>
+                <span class="label"><strong>Local</strong></span>
+              </div>
+              <div class="dash__grid">
+                <div class="dash__cell"><span class="label">Living room lamp</span><span class="seg" data-seg>ON</span></div>
+                <div class="dash__cell"><span class="label">Air quality</span><span class="seg" data-seg>GOOD</span></div>
+                <div class="dash__cell"><span class="label">TV</span><span class="seg" data-seg>STANDBY</span></div>
+                <div class="dash__cell"><span class="label">Camera</span><span class="seg" data-seg>LOCAL</span></div>
+                <div class="dash__cell dash__cell--wide"><span class="label">Last backup to NAS</span><span class="seg" data-seg>TONIGHT 03:00</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="rule" />
+
+      <section class="close deck" aria-labelledby="close-title">
+        <h2 id="close-title" class="hook">
+          <span class="seg" data-seg>YOUR HOME.</span>
+          <span class="seg" data-seg>YOUR DATA.</span>
+          <span class="seg is-amber" data-seg>YOUR RULES.</span>
+        </h2>
+        <p>
+          <strong>Big Brother isn't invited.</strong> Lantern is the smart home you would build
+          if nobody was trying to sell you a subscription: open standards, your own hardware,
+          and a light that stays on when everything around it goes dark.
+        </p>
+        <div class="hero__keys">
+          <a class="key key--primary" href="#how"><svg aria-hidden="true"><use href="#i-play" /></svg>Explore the house</a>
+        </div>
+      </section>
+
+      <footer class="footer deck">
+        <p class="note">
+          Lantern is a course project (SMVIT) built on Home Assistant, Raspberry Pi, Matter and
+          Thread. All visuals are stylised illustrations, not photographs. No addresses, hostnames
+          or network configuration appear on this page.
+        </p>
+        <p class="note">Segment display face: <a href="https://github.com/keshikan/DSEG">DSEG</a>, SIL OFL.</p>
+      </footer>
+    </main>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

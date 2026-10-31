@@ -1,0 +1,44 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-31T18:57:42.817Z",
+        "reason": "user confirmed: decision-page steer asked for 'a cool blue/cyan glow like vintage VFD displays'; phosphor bloom is the pinned world"
+      },
+      {
+        "rule": "radial-halo",
+        "value": "*",
+        "files": [
+          "css/style.css"
+        ],
+        "createdAt": "2026-10-31T19:03:15.935Z",
+        "reason": "user confirmed: steer asked for 'deep near-black background with subtle blue-black depth, not flat black-on-black'"
+      },
+      {
+        "rule": "marquee",
+        "value": "*",
+        "files": [
+          "css/style.css"
+        ],
+        "createdAt": "2026-10-31T19:03:15.965Z",
+        "reason": "domain-appropriate: scrolling text is native to VFD hi-fi deck displays, the pinned world; stops under prefers-reduced-motion"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-31T19:04:44.558Z",
+        "reason": "false positive: .display/.stage__panel/.schematic/.dash carry padding via clamp() in css/style.css which the static scan does not resolve; .mode is a segmented control whose keys hold a 20px inset and 46px height; .stage's flush child is the canvas, not text"
+      }
+    ]
+  }
+}

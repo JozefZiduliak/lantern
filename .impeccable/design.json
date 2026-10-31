@@ -1,0 +1,703 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-31T19:25:19+00:00",
+  "title": "Design System: Lantern",
+  "extensions": {
+    "colorMeta": {
+      "ground": {
+        "role": "neutral",
+        "displayName": "Deck Ground",
+        "canonical": "oklch(15.0% 0.021 264)",
+        "tonalRamp": [
+          "oklch(15.0% 0.009 264)",
+          "oklch(26.4% 0.012 264)",
+          "oklch(37.9% 0.016 264)",
+          "oklch(49.3% 0.019 264)",
+          "oklch(60.7% 0.019 264)",
+          "oklch(72.1% 0.016 264)",
+          "oklch(83.6% 0.012 264)",
+          "oklch(95.0% 0.009 264)"
+        ]
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "Panel",
+        "canonical": "oklch(18.7% 0.033 262)",
+        "tonalRamp": [
+          "oklch(15.0% 0.014 262)",
+          "oklch(26.4% 0.019 262)",
+          "oklch(37.9% 0.025 262)",
+          "oklch(49.3% 0.030 262)",
+          "oklch(60.7% 0.030 262)",
+          "oklch(72.1% 0.025 262)",
+          "oklch(83.6% 0.019 262)",
+          "oklch(95.0% 0.014 262)"
+        ]
+      },
+      "recess": {
+        "role": "neutral",
+        "displayName": "Recess",
+        "canonical": "oklch(21.4% 0.050 265)",
+        "tonalRamp": [
+          "oklch(15.0% 0.021 265)",
+          "oklch(26.4% 0.029 265)",
+          "oklch(37.9% 0.037 265)",
+          "oklch(49.3% 0.046 265)",
+          "oklch(60.7% 0.046 265)",
+          "oklch(72.1% 0.037 265)",
+          "oklch(83.6% 0.029 265)",
+          "oklch(95.0% 0.021 265)"
+        ]
+      },
+      "bezel": {
+        "role": "neutral",
+        "displayName": "Bezel",
+        "canonical": "oklch(27.5% 0.050 264)",
+        "tonalRamp": [
+          "oklch(15.0% 0.021 264)",
+          "oklch(26.4% 0.029 264)",
+          "oklch(37.9% 0.037 264)",
+          "oklch(49.3% 0.045 264)",
+          "oklch(60.7% 0.045 264)",
+          "oklch(72.1% 0.037 264)",
+          "oklch(83.6% 0.029 264)",
+          "oklch(95.0% 0.021 264)"
+        ]
+      },
+      "bezel-hi": {
+        "role": "neutral",
+        "displayName": "Bezel Highlight",
+        "canonical": "oklch(34.1% 0.065 265)",
+        "tonalRamp": [
+          "oklch(15.0% 0.028 265)",
+          "oklch(26.4% 0.038 265)",
+          "oklch(37.9% 0.049 265)",
+          "oklch(49.3% 0.060 265)",
+          "oklch(60.7% 0.060 265)",
+          "oklch(72.1% 0.049 265)",
+          "oklch(83.6% 0.038 265)",
+          "oklch(95.0% 0.028 265)"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "oklch(28.7% 0.037 249)",
+        "tonalRamp": [
+          "oklch(15.0% 0.015 249)",
+          "oklch(26.4% 0.021 249)",
+          "oklch(37.9% 0.027 249)",
+          "oklch(49.3% 0.034 249)",
+          "oklch(60.7% 0.034 249)",
+          "oklch(72.1% 0.027 249)",
+          "oklch(83.6% 0.021 249)",
+          "oklch(95.0% 0.015 249)"
+        ]
+      },
+      "ghost-14": {
+        "role": "primary",
+        "displayName": "Ghost Cell, 14-segment",
+        "canonical": "oklch(30.5% 0.042 229)",
+        "tonalRamp": [
+          "oklch(15.0% 0.018 229)",
+          "oklch(26.4% 0.025 229)",
+          "oklch(37.9% 0.032 229)",
+          "oklch(49.3% 0.038 229)",
+          "oklch(60.7% 0.038 229)",
+          "oklch(72.1% 0.032 229)",
+          "oklch(83.6% 0.025 229)",
+          "oklch(95.0% 0.018 229)"
+        ]
+      },
+      "ghost-7": {
+        "role": "primary",
+        "displayName": "Ghost Cell, 7-segment",
+        "canonical": "oklch(25.9% 0.031 225)",
+        "tonalRamp": [
+          "oklch(15.0% 0.013 225)",
+          "oklch(26.4% 0.018 225)",
+          "oklch(37.9% 0.023 225)",
+          "oklch(49.3% 0.028 225)",
+          "oklch(60.7% 0.028 225)",
+          "oklch(72.1% 0.023 225)",
+          "oklch(83.6% 0.018 225)",
+          "oklch(95.0% 0.013 225)"
+        ]
+      },
+      "dim": {
+        "role": "primary",
+        "displayName": "Dim Cyan",
+        "canonical": "oklch(49.7% 0.069 223)",
+        "tonalRamp": [
+          "oklch(15.0% 0.029 223)",
+          "oklch(26.4% 0.041 223)",
+          "oklch(37.9% 0.052 223)",
+          "oklch(49.3% 0.064 223)",
+          "oklch(60.7% 0.064 223)",
+          "oklch(72.1% 0.052 223)",
+          "oklch(83.6% 0.041 223)",
+          "oklch(95.0% 0.029 223)"
+        ]
+      },
+      "off-segment": {
+        "role": "primary",
+        "displayName": "Off Segment",
+        "canonical": "oklch(60.7% 0.085 221)",
+        "tonalRamp": [
+          "oklch(15.0% 0.036 221)",
+          "oklch(26.4% 0.050 221)",
+          "oklch(37.9% 0.064 221)",
+          "oklch(49.3% 0.078 221)",
+          "oklch(60.7% 0.078 221)",
+          "oklch(72.1% 0.064 221)",
+          "oklch(83.6% 0.050 221)",
+          "oklch(95.0% 0.036 221)"
+        ]
+      },
+      "phosphor-cyan": {
+        "role": "primary",
+        "displayName": "Phosphor Cyan",
+        "canonical": "oklch(81.2% 0.113 219)",
+        "tonalRamp": [
+          "oklch(15.0% 0.048 219)",
+          "oklch(26.4% 0.066 219)",
+          "oklch(37.9% 0.085 219)",
+          "oklch(49.3% 0.104 219)",
+          "oklch(60.7% 0.104 219)",
+          "oklch(72.1% 0.085 219)",
+          "oklch(83.6% 0.066 219)",
+          "oklch(95.0% 0.048 219)"
+        ]
+      },
+      "phosphor-cyan-hi": {
+        "role": "primary",
+        "displayName": "Phosphor Bloom",
+        "canonical": "oklch(93.2% 0.055 213)",
+        "tonalRamp": [
+          "oklch(15.0% 0.023 213)",
+          "oklch(26.4% 0.032 213)",
+          "oklch(37.9% 0.042 213)",
+          "oklch(49.3% 0.051 213)",
+          "oklch(60.7% 0.051 213)",
+          "oklch(72.1% 0.042 213)",
+          "oklch(83.6% 0.032 213)",
+          "oklch(95.0% 0.023 213)"
+        ]
+      },
+      "cyan-glow": {
+        "role": "primary",
+        "displayName": "Cyan Glow",
+        "canonical": "rgba(95, 211, 243, 0.55)",
+        "tonalRamp": [
+          "oklch(15.0% 0.048 219)",
+          "oklch(26.4% 0.066 219)",
+          "oklch(37.9% 0.085 219)",
+          "oklch(49.3% 0.104 219)",
+          "oklch(60.7% 0.104 219)",
+          "oklch(72.1% 0.085 219)",
+          "oklch(83.6% 0.066 219)",
+          "oklch(95.0% 0.048 219)"
+        ]
+      },
+      "cyan-glow-soft": {
+        "role": "primary",
+        "displayName": "Cyan Glow, Soft",
+        "canonical": "rgba(95, 211, 243, 0.22)",
+        "tonalRamp": [
+          "oklch(15.0% 0.048 219)",
+          "oklch(26.4% 0.066 219)",
+          "oklch(37.9% 0.085 219)",
+          "oklch(49.3% 0.104 219)",
+          "oklch(60.7% 0.104 219)",
+          "oklch(72.1% 0.085 219)",
+          "oklch(83.6% 0.066 219)",
+          "oklch(95.0% 0.048 219)"
+        ]
+      },
+      "prose": {
+        "role": "neutral",
+        "displayName": "Prose",
+        "canonical": "oklch(94.0% 0.022 219)",
+        "tonalRamp": [
+          "oklch(15.0% 0.009 219)",
+          "oklch(26.4% 0.013 219)",
+          "oklch(37.9% 0.016 219)",
+          "oklch(49.3% 0.020 219)",
+          "oklch(60.7% 0.020 219)",
+          "oklch(72.1% 0.016 219)",
+          "oklch(83.6% 0.013 219)",
+          "oklch(95.0% 0.009 219)"
+        ]
+      },
+      "prose-dim": {
+        "role": "neutral",
+        "displayName": "Prose Dim",
+        "canonical": "oklch(76.3% 0.045 222)",
+        "tonalRamp": [
+          "oklch(15.0% 0.019 222)",
+          "oklch(26.4% 0.027 222)",
+          "oklch(37.9% 0.034 222)",
+          "oklch(49.3% 0.042 222)",
+          "oklch(60.7% 0.042 222)",
+          "oklch(72.1% 0.034 222)",
+          "oklch(83.6% 0.027 222)",
+          "oklch(95.0% 0.019 222)"
+        ]
+      },
+      "prose-max": {
+        "role": "neutral",
+        "displayName": "Prose Max",
+        "canonical": "oklch(100.0% 0.000 90)",
+        "tonalRamp": [
+          "oklch(15.0% 0.008 90)",
+          "oklch(26.4% 0.012 90)",
+          "oklch(37.9% 0.015 90)",
+          "oklch(49.3% 0.018 90)",
+          "oklch(60.7% 0.018 90)",
+          "oklch(72.1% 0.015 90)",
+          "oklch(83.6% 0.012 90)",
+          "oklch(95.0% 0.008 90)"
+        ]
+      },
+      "thread-violet": {
+        "role": "tertiary",
+        "displayName": "Thread Violet",
+        "canonical": "oklch(72.5% 0.165 298)",
+        "tonalRamp": [
+          "oklch(15.0% 0.070 298)",
+          "oklch(26.4% 0.097 298)",
+          "oklch(37.9% 0.124 298)",
+          "oklch(49.3% 0.152 298)",
+          "oklch(60.7% 0.152 298)",
+          "oklch(72.1% 0.124 298)",
+          "oklch(83.6% 0.097 298)",
+          "oklch(95.0% 0.070 298)"
+        ]
+      },
+      "lantern-amber": {
+        "role": "secondary",
+        "displayName": "Lantern Amber",
+        "canonical": "oklch(78.4% 0.159 73)",
+        "tonalRamp": [
+          "oklch(15.0% 0.067 73)",
+          "oklch(26.4% 0.093 73)",
+          "oklch(37.9% 0.119 73)",
+          "oklch(49.3% 0.146 73)",
+          "oklch(60.7% 0.146 73)",
+          "oklch(72.1% 0.119 73)",
+          "oklch(83.6% 0.093 73)",
+          "oklch(95.0% 0.067 73)"
+        ]
+      },
+      "lantern-amber-hi": {
+        "role": "secondary",
+        "displayName": "Amber Highlight",
+        "canonical": "oklch(88.5% 0.118 83)",
+        "tonalRamp": [
+          "oklch(15.0% 0.050 83)",
+          "oklch(26.4% 0.069 83)",
+          "oklch(37.9% 0.089 83)",
+          "oklch(49.3% 0.108 83)",
+          "oklch(60.7% 0.108 83)",
+          "oklch(72.1% 0.089 83)",
+          "oklch(83.6% 0.069 83)",
+          "oklch(95.0% 0.050 83)"
+        ]
+      },
+      "amber-glow": {
+        "role": "secondary",
+        "displayName": "Amber Glow",
+        "canonical": "rgba(245, 166, 35, 0.5)",
+        "tonalRamp": [
+          "oklch(15.0% 0.067 73)",
+          "oklch(26.4% 0.093 73)",
+          "oklch(37.9% 0.119 73)",
+          "oklch(49.3% 0.146 73)",
+          "oklch(60.7% 0.146 73)",
+          "oklch(72.1% 0.119 73)",
+          "oklch(83.6% 0.093 73)",
+          "oklch(95.0% 0.067 73)"
+        ]
+      },
+      "amber-dim": {
+        "role": "secondary",
+        "displayName": "Amber Dim",
+        "canonical": "oklch(38.4% 0.072 74)",
+        "tonalRamp": [
+          "oklch(15.0% 0.030 74)",
+          "oklch(26.4% 0.042 74)",
+          "oklch(37.9% 0.054 74)",
+          "oklch(49.3% 0.066 74)",
+          "oklch(60.7% 0.066 74)",
+          "oklch(72.1% 0.054 74)",
+          "oklch(83.6% 0.042 74)",
+          "oklch(95.0% 0.030 74)"
+        ]
+      },
+      "unlit-dot": {
+        "role": "neutral",
+        "displayName": "Unlit Dot",
+        "canonical": "oklch(25.1% 0.029 261)",
+        "tonalRamp": [
+          "oklch(15.0% 0.012 261)",
+          "oklch(26.4% 0.017 261)",
+          "oklch(37.9% 0.022 261)",
+          "oklch(49.3% 0.027 261)",
+          "oklch(60.7% 0.027 261)",
+          "oklch(72.1% 0.022 261)",
+          "oklch(83.6% 0.017 261)",
+          "oklch(95.0% 0.012 261)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display (14-segment)",
+        "purpose": "The hook and closing line; brand mark at 22px; stage printed line at clamp(9px, 2.3vw, 18px)."
+      },
+      "display-clock": {
+        "displayName": "Display Clock (7-segment)",
+        "purpose": "Twin readout clocks only; colon ticks each second."
+      },
+      "readout": {
+        "displayName": "Readout",
+        "purpose": "Lead reading of each meter."
+      },
+      "readout-small": {
+        "displayName": "Readout, small",
+        "purpose": "Readout rows and schematic labels; dashboard cells 16px, row readouts 15px, tooltip title 14px."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headings, no kicker above."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Meter and row headings."
+      },
+      "body-lead": {
+        "displayName": "Body Lead",
+        "purpose": "Hero subline and closing paragraph, 48-52ch, one strong in white."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "All other prose, max 62ch; supporting copy in prose-dim."
+      },
+      "label": {
+        "displayName": "Label (silkscreen)",
+        "purpose": "Readout names, nav, legend, ticker, scene labels; uppercase, tabular."
+      },
+      "key-label": {
+        "displayName": "Key Label",
+        "purpose": "Deck key text; part chips at 11px / 0.10em."
+      },
+      "note": {
+        "displayName": "Note",
+        "purpose": "Footnotes, instructions, provenance; sentence case."
+      }
+    },
+    "shadows": [
+      {
+        "name": "display-seat",
+        "value": "0 20px 60px rgba(0,0,0,0.55), 0 2px 0 rgba(255,255,255,0.03) inset, 0 0 0 1px rgba(0,0,0,0.6)",
+        "purpose": "Seats display windows and the stage into the ground."
+      },
+      {
+        "name": "display-seat-light",
+        "value": "0 20px 60px rgba(0,0,0,0.45)",
+        "purpose": "Schematic and dashboard panels."
+      },
+      {
+        "name": "recess",
+        "value": "inset 0 2px 8px rgba(0,0,0,0.5)",
+        "purpose": "Every readout, row readout and dashboard cell."
+      },
+      {
+        "name": "key-rest",
+        "value": "0 2px 0 #050810, 0 6px 14px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.04)",
+        "purpose": "Deck key 2px travel at rest."
+      },
+      {
+        "name": "key-pressed",
+        "value": "0 0 0 #050810, 0 2px 6px rgba(0,0,0,0.45), inset 0 2px 4px rgba(0,0,0,0.5)",
+        "purpose": "Deck key pressed, with translateY(2px)."
+      },
+      {
+        "name": "key-primary-glow",
+        "value": "0 2px 0 #050810, 0 6px 14px rgba(0,0,0,0.45), 0 0 16px rgba(95,211,243,0.22), inset 0 1px 0 rgba(191,243,255,0.15)",
+        "purpose": "Lit primary key at rest; hover widens the glow to 0 0 24px rgba(95,211,243,0.55)."
+      },
+      {
+        "name": "key-amber-pressed",
+        "value": "0 0 0 #050810, 0 2px 6px rgba(0,0,0,0.45), 0 0 18px rgba(245,166,35,0.5), inset 0 2px 4px rgba(0,0,0,0.4)",
+        "purpose": "CUT INTERNET key while the internet is cut."
+      },
+      {
+        "name": "phosphor-bloom-cyan",
+        "value": "text-shadow: 0 0 6px rgba(95,211,243,0.55), 0 0 18px rgba(95,211,243,0.22)",
+        "purpose": "Lit cyan segment."
+      },
+      {
+        "name": "phosphor-bloom-amber",
+        "value": "text-shadow: 0 0 6px rgba(245,166,35,0.5), 0 0 20px rgba(245,166,35,0.3)",
+        "purpose": "Amber segment state."
+      },
+      {
+        "name": "phosphor-bloom-violet",
+        "value": "text-shadow: 0 0 8px rgba(180,140,255,0.45)",
+        "purpose": "Violet segment state."
+      },
+      {
+        "name": "lantern-dot",
+        "value": "0 0 10px rgba(245,166,35,0.5), 0 0 2px #f5a623",
+        "purpose": "The 10px amber indicator dot."
+      },
+      {
+        "name": "hairline-relief",
+        "value": "0 1px 0 rgba(255,255,255,0.03)",
+        "purpose": "A 1px rule scored into the face."
+      },
+      {
+        "name": "tooltip",
+        "value": "0 8px 24px rgba(0,0,0,0.5)",
+        "purpose": "The only floating element."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "The one curve for every CSS transition."
+      },
+      {
+        "name": "duration-key-travel",
+        "value": "0.15s",
+        "purpose": "Key transform and tooltip fade."
+      },
+      {
+        "name": "duration-state",
+        "value": "0.2s",
+        "purpose": "Color, border, background and shadow changes on keys, chips and nav."
+      },
+      {
+        "name": "duration-segment",
+        "value": "0.4s",
+        "purpose": "Segment color/bloom swap and scene-label dimming."
+      },
+      {
+        "name": "seg-blink",
+        "value": "1s steps(1, end) infinite, 64% on / 36% off",
+        "purpose": "The 12:00 blink; reduced motion holds at 55% opacity."
+      },
+      {
+        "name": "print-glyph",
+        "value": "26ms per character",
+        "purpose": "Printed stage line; reduced motion sets the string at once."
+      },
+      {
+        "name": "ticker",
+        "value": "70s linear infinite, translateX(0 to -50%)",
+        "purpose": "Signal-chain ticker; off under reduced motion."
+      },
+      {
+        "name": "scene-ease",
+        "value": "exponential, lantern rate 4/s, cloud rate 3/s",
+        "purpose": "3D state changes ease toward targets; snap under reduced motion."
+      },
+      {
+        "name": "orbit",
+        "value": "autoRotateSpeed 0.35",
+        "purpose": "Only continuous motion; stops under reduced motion."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "transition/animation 0.01ms, iteration 1",
+        "purpose": "Global collapse under prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "readouts-stack",
+        "value": "460px"
+      },
+      {
+        "name": "brand-label",
+        "value": "640px"
+      },
+      {
+        "name": "hook-stack",
+        "value": "700px"
+      },
+      {
+        "name": "meters-two-up",
+        "value": "760px"
+      },
+      {
+        "name": "rows-three-col",
+        "value": "800px"
+      },
+      {
+        "name": "hero-split",
+        "value": "900px"
+      },
+      {
+        "name": "inside-split",
+        "value": "1000px"
+      },
+      {
+        "name": "deck-max",
+        "value": "1280px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Segment Display",
+      "kind": "custom",
+      "refersTo": "display",
+      "description": "The signature primitive: a DSEG14 string over a ghost layer of all-lit cells (~), spaces printed as !, with states off / amber / violet / blink.",
+      "html": "<span class=\"ds-seg\" aria-label=\"LIGHTS ON\"><span class=\"ds-seg__ghost\" aria-hidden=\"true\">~~~~~~~~~</span><span class=\"ds-seg__lit\" aria-hidden=\"true\">LIGHTS!ON</span></span> <span class=\"ds-seg is-off\" aria-label=\"no reading\"><span class=\"ds-seg__ghost\" aria-hidden=\"true\">~~~~</span><span class=\"ds-seg__lit\" aria-hidden=\"true\">----</span></span> <span class=\"ds-seg is-amber\" aria-label=\"HOUSE ON\"><span class=\"ds-seg__ghost\" aria-hidden=\"true\">~~~~~~~~</span><span class=\"ds-seg__lit\" aria-hidden=\"true\">HOUSE!ON</span></span> <span class=\"ds-seg is-violet\" aria-label=\"THREAD\"><span class=\"ds-seg__ghost\" aria-hidden=\"true\">~~~~~~</span><span class=\"ds-seg__lit\" aria-hidden=\"true\">THREAD</span></span>",
+      "css": ".ds-seg{position:relative;display:inline-block;font-family:var(--font-seg,'DSEG14',monospace);font-size:32px;line-height:1;letter-spacing:.04em;white-space:nowrap}.ds-seg__ghost{position:absolute;inset:0;color:var(--ghost,#163340);pointer-events:none;user-select:none}.ds-seg__lit{position:relative;color:var(--cyan,#5fd3f3);text-shadow:0 0 6px var(--cyan-glow,rgba(95,211,243,.55)),0 0 18px var(--cyan-glow-soft,rgba(95,211,243,.22));transition:color .4s var(--ease-out,cubic-bezier(.16,1,.3,1)),text-shadow .4s var(--ease-out,cubic-bezier(.16,1,.3,1))}.ds-seg.is-off .ds-seg__lit{color:#3f8ea6;text-shadow:none}.ds-seg.is-amber .ds-seg__lit{color:var(--amber,#f5a623);text-shadow:0 0 6px var(--amber-glow,rgba(245,166,35,.5)),0 0 20px rgba(245,166,35,.3)}.ds-seg.is-violet .ds-seg__lit{color:var(--violet,#b48cff);text-shadow:0 0 8px rgba(180,140,255,.45)}.ds-seg.is-blink .ds-seg__lit{animation:ds-seg-blink 1s steps(1,end) infinite}@keyframes ds-seg-blink{0%,64%{opacity:1}65%,100%{opacity:0}}@media (prefers-reduced-motion:reduce){.ds-seg.is-blink .ds-seg__lit{animation:none;opacity:.55}}"
+    },
+    {
+      "name": "Deck Key",
+      "kind": "button",
+      "refersTo": "key",
+      "description": "Default deck key: bezelled, 48px tall, 2px travel on press, lights on hover.",
+      "html": "<button class=\"ds-key\" type=\"button\">What's inside</button>",
+      "css": ".ds-key{appearance:none;display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 20px;border:1px solid var(--dim,#2f6b7f);border-radius:var(--key-radius,3px);background:linear-gradient(180deg,#101c30,#0b1322);color:var(--cyan,#5fd3f3);font-family:var(--font-mono,'Martian Mono',ui-monospace,Menlo,monospace);font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;cursor:pointer;box-shadow:0 2px 0 #050810,0 6px 14px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.04);transition:transform .15s var(--ease-out,cubic-bezier(.16,1,.3,1)),box-shadow .2s var(--ease-out,cubic-bezier(.16,1,.3,1)),color .2s var(--ease-out,cubic-bezier(.16,1,.3,1)),border-color .2s var(--ease-out,cubic-bezier(.16,1,.3,1))}.ds-key svg{width:14px;height:14px;fill:currentColor;flex:none}.ds-key:hover{color:var(--cyan-hi,#bff3ff);border-color:var(--cyan,#5fd3f3)}.ds-key:focus-visible{outline:2px solid var(--cyan-hi,#bff3ff);outline-offset:3px}.ds-key:active,.ds-key[aria-pressed=true]{transform:translateY(2px);box-shadow:0 0 0 #050810,0 2px 6px rgba(0,0,0,.45),inset 0 2px 4px rgba(0,0,0,.5)}.ds-key[aria-pressed=true]{background:linear-gradient(180deg,#1a4250,#123340);border-color:var(--cyan,#5fd3f3);color:var(--cyan-hi,#bff3ff)}.ds-key:disabled{opacity:.45;cursor:not-allowed}"
+    },
+    {
+      "name": "Deck Key, Primary",
+      "kind": "button",
+      "refersTo": "key-primary",
+      "description": "The lit key: cyan bezel, bloom text, soft glow that widens on hover.",
+      "html": "<a class=\"ds-key ds-key--primary\" href=\"#how\"><svg aria-hidden=\"true\" viewBox=\"0 0 16 16\"><path d=\"M4 2.5v11l9-5.5z\"/></svg>See how it works</a>",
+      "css": ".ds-key{appearance:none;display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 20px;border:1px solid var(--dim,#2f6b7f);border-radius:var(--key-radius,3px);background:linear-gradient(180deg,#101c30,#0b1322);color:var(--cyan,#5fd3f3);font-family:var(--font-mono,'Martian Mono',ui-monospace,Menlo,monospace);font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;cursor:pointer;box-shadow:0 2px 0 #050810,0 6px 14px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.04);transition:transform .15s var(--ease-out,cubic-bezier(.16,1,.3,1)),box-shadow .2s var(--ease-out,cubic-bezier(.16,1,.3,1)),color .2s var(--ease-out,cubic-bezier(.16,1,.3,1)),border-color .2s var(--ease-out,cubic-bezier(.16,1,.3,1))}.ds-key svg{width:14px;height:14px;fill:currentColor;flex:none}.ds-key:hover{color:var(--cyan-hi,#bff3ff);border-color:var(--cyan,#5fd3f3)}.ds-key:focus-visible{outline:2px solid var(--cyan-hi,#bff3ff);outline-offset:3px}.ds-key:active,.ds-key[aria-pressed=true]{transform:translateY(2px);box-shadow:0 0 0 #050810,0 2px 6px rgba(0,0,0,.45),inset 0 2px 4px rgba(0,0,0,.5)}.ds-key[aria-pressed=true]{background:linear-gradient(180deg,#1a4250,#123340);border-color:var(--cyan,#5fd3f3);color:var(--cyan-hi,#bff3ff)}.ds-key:disabled{opacity:.45;cursor:not-allowed}.ds-key--primary{background:linear-gradient(180deg,#1a4250,#123340);border-color:var(--cyan,#5fd3f3);color:var(--cyan-hi,#bff3ff);box-shadow:0 2px 0 #050810,0 6px 14px rgba(0,0,0,.45),0 0 16px var(--cyan-glow-soft,rgba(95,211,243,.22)),inset 0 1px 0 rgba(191,243,255,.15)}.ds-key--primary:hover{box-shadow:0 2px 0 #050810,0 6px 14px rgba(0,0,0,.45),0 0 24px var(--cyan-glow,rgba(95,211,243,.55)),inset 0 1px 0 rgba(191,243,255,.2)}"
+    },
+    {
+      "name": "Deck Key, Amber (pressed)",
+      "kind": "button",
+      "refersTo": "key-amber-pressed",
+      "description": "The CUT INTERNET key while the internet is cut: the only amber control on the deck.",
+      "html": "<button class=\"ds-key ds-key--amber\" type=\"button\" aria-pressed=\"true\">Restore the internet</button>",
+      "css": ".ds-key{appearance:none;display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 20px;border:1px solid var(--dim,#2f6b7f);border-radius:var(--key-radius,3px);background:linear-gradient(180deg,#101c30,#0b1322);color:var(--cyan,#5fd3f3);font-family:var(--font-mono,'Martian Mono',ui-monospace,Menlo,monospace);font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;cursor:pointer;box-shadow:0 2px 0 #050810,0 6px 14px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.04);transition:transform .15s var(--ease-out,cubic-bezier(.16,1,.3,1)),box-shadow .2s var(--ease-out,cubic-bezier(.16,1,.3,1)),color .2s var(--ease-out,cubic-bezier(.16,1,.3,1)),border-color .2s var(--ease-out,cubic-bezier(.16,1,.3,1))}.ds-key svg{width:14px;height:14px;fill:currentColor;flex:none}.ds-key:hover{color:var(--cyan-hi,#bff3ff);border-color:var(--cyan,#5fd3f3)}.ds-key:focus-visible{outline:2px solid var(--cyan-hi,#bff3ff);outline-offset:3px}.ds-key:active,.ds-key[aria-pressed=true]{transform:translateY(2px);box-shadow:0 0 0 #050810,0 2px 6px rgba(0,0,0,.45),inset 0 2px 4px rgba(0,0,0,.5)}.ds-key[aria-pressed=true]{background:linear-gradient(180deg,#1a4250,#123340);border-color:var(--cyan,#5fd3f3);color:var(--cyan-hi,#bff3ff)}.ds-key:disabled{opacity:.45;cursor:not-allowed}.ds-key--amber[aria-pressed=true]{background:linear-gradient(180deg,#4a3210,#3a2708);border-color:var(--amber,#f5a623);color:#ffd27a;box-shadow:0 0 0 #050810,0 2px 6px rgba(0,0,0,.45),0 0 18px var(--amber-glow,rgba(245,166,35,.5)),inset 0 2px 4px rgba(0,0,0,.4)}"
+    },
+    {
+      "name": "Mode Group",
+      "kind": "button",
+      "refersTo": "key-pressed",
+      "description": "Keys fused into one bezelled strip; the selected key is lit, the other sits on panel in dim prose.",
+      "html": "<div class=\"ds-mode\"><button class=\"ds-key\" type=\"button\" aria-pressed=\"true\">Lantern</button><button class=\"ds-key\" type=\"button\" aria-pressed=\"false\">Big-tech</button></div>",
+      "css": ".ds-key{appearance:none;display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 20px;border:1px solid var(--dim,#2f6b7f);border-radius:var(--key-radius,3px);background:linear-gradient(180deg,#101c30,#0b1322);color:var(--cyan,#5fd3f3);font-family:var(--font-mono,'Martian Mono',ui-monospace,Menlo,monospace);font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;cursor:pointer;box-shadow:0 2px 0 #050810,0 6px 14px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.04);transition:transform .15s var(--ease-out,cubic-bezier(.16,1,.3,1)),box-shadow .2s var(--ease-out,cubic-bezier(.16,1,.3,1)),color .2s var(--ease-out,cubic-bezier(.16,1,.3,1)),border-color .2s var(--ease-out,cubic-bezier(.16,1,.3,1))}.ds-key svg{width:14px;height:14px;fill:currentColor;flex:none}.ds-key:hover{color:var(--cyan-hi,#bff3ff);border-color:var(--cyan,#5fd3f3)}.ds-key:focus-visible{outline:2px solid var(--cyan-hi,#bff3ff);outline-offset:3px}.ds-key:active,.ds-key[aria-pressed=true]{transform:translateY(2px);box-shadow:0 0 0 #050810,0 2px 6px rgba(0,0,0,.45),inset 0 2px 4px rgba(0,0,0,.5)}.ds-key[aria-pressed=true]{background:linear-gradient(180deg,#1a4250,#123340);border-color:var(--cyan,#5fd3f3);color:var(--cyan-hi,#bff3ff)}.ds-key:disabled{opacity:.45;cursor:not-allowed}.ds-mode{display:inline-flex;border:1px solid var(--dim,#2f6b7f);border-radius:var(--key-radius,3px);overflow:hidden}.ds-mode .ds-key{border:0;border-radius:0;box-shadow:none;min-height:46px}.ds-mode .ds-key+.ds-key{border-left:1px solid var(--dim,#2f6b7f)}.ds-mode .ds-key[aria-pressed=true]{transform:none}.ds-mode .ds-key[aria-pressed=false]{background:var(--panel,#0b1322);color:var(--text-2,#93b9c7)}.ds-mode .ds-key[aria-pressed=false]:hover{color:var(--cyan-hi,#bff3ff)}"
+    },
+    {
+      "name": "Part Chip",
+      "kind": "chip",
+      "refersTo": "part-chip",
+      "description": "Part selector on the stage: recessed, stroked icon, lights cyan when hovered or pressed.",
+      "html": "<button class=\"ds-chip\" type=\"button\" aria-pressed=\"false\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><rect x=\"3\" y=\"9\" width=\"18\" height=\"7\" rx=\"1.5\"/><path d=\"M7 12.5h.01M11 12.5h.01\"/><path d=\"M12 9V5l3-2\"/></svg>Router</button> <button class=\"ds-chip\" type=\"button\" aria-pressed=\"true\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><rect x=\"4\" y=\"4\" width=\"16\" height=\"16\" rx=\"2\"/><path d=\"M8 20v2M16 20v2M8 2v2M16 2v2\"/></svg>Raspberry Pi</button>",
+      "css": ".ds-chip{appearance:none;display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--line,#1c2c3c);border-radius:var(--key-radius,3px);background:var(--recess,#0e1830);color:var(--text-2,#93b9c7);font-family:var(--font-mono,'Martian Mono',ui-monospace,Menlo,monospace);font-size:11px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:color .2s var(--ease-out,cubic-bezier(.16,1,.3,1)),border-color .2s var(--ease-out,cubic-bezier(.16,1,.3,1))}.ds-chip svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}.ds-chip:hover,.ds-chip[aria-pressed=true]{color:var(--cyan-hi,#bff3ff);border-color:var(--cyan,#5fd3f3)}.ds-chip:focus-visible{outline:2px solid var(--cyan-hi,#bff3ff);outline-offset:3px}"
+    },
+    {
+      "name": "Top Bezel Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Segment brand mark with silkscreen nav labels on a blurred panel bezel.",
+      "html": "<nav class=\"ds-topbar\"><a class=\"ds-brand\" href=\"#\"><span class=\"ds-seg\" aria-label=\"LANTERN\"><span class=\"ds-seg__ghost\" aria-hidden=\"true\">~~~~~~~</span><span class=\"ds-seg__lit\" aria-hidden=\"true\">LANTERN</span></span><span class=\"ds-label\">Self-hosted smart home</span></a><div class=\"ds-topnav\"><a href=\"#why\">Why</a><a href=\"#how\">How</a><a href=\"#inside\">Inside</a></div></nav>",
+      "css": ".ds-seg{position:relative;display:inline-block;font-family:var(--font-seg,'DSEG14',monospace);font-size:32px;line-height:1;letter-spacing:.04em;white-space:nowrap}.ds-seg__ghost{position:absolute;inset:0;color:var(--ghost,#163340);pointer-events:none;user-select:none}.ds-seg__lit{position:relative;color:var(--cyan,#5fd3f3);text-shadow:0 0 6px var(--cyan-glow,rgba(95,211,243,.55)),0 0 18px var(--cyan-glow-soft,rgba(95,211,243,.22));transition:color .4s var(--ease-out,cubic-bezier(.16,1,.3,1)),text-shadow .4s var(--ease-out,cubic-bezier(.16,1,.3,1))}.ds-seg.is-off .ds-seg__lit{color:#3f8ea6;text-shadow:none}.ds-seg.is-amber .ds-seg__lit{color:var(--amber,#f5a623);text-shadow:0 0 6px var(--amber-glow,rgba(245,166,35,.5)),0 0 20px rgba(245,166,35,.3)}.ds-seg.is-violet .ds-seg__lit{color:var(--violet,#b48cff);text-shadow:0 0 8px rgba(180,140,255,.45)}.ds-seg.is-blink .ds-seg__lit{animation:ds-seg-blink 1s steps(1,end) infinite}@keyframes ds-seg-blink{0%,64%{opacity:1}65%,100%{opacity:0}}@media (prefers-reduced-motion:reduce){.ds-seg.is-blink .ds-seg__lit{animation:none;opacity:.55}}.ds-topbar{display:flex;align-items:center;justify-content:space-between;gap:24px;height:64px;padding:0 24px;background:rgba(7,11,20,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--line,#1c2c3c)}.ds-brand{display:inline-flex;align-items:baseline;gap:14px;text-decoration:none}.ds-brand .ds-seg{font-size:22px}.ds-label{font-family:var(--font-mono,'Martian Mono',ui-monospace,Menlo,monospace);font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--text-2,#93b9c7)}.ds-topnav{display:flex;gap:4px}.ds-topnav a{font-family:var(--font-mono,'Martian Mono',ui-monospace,Menlo,monospace);font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--text-2,#93b9c7);text-decoration:none;padding:10px 12px;border-radius:var(--key-radius,3px);transition:color .2s var(--ease-out,cubic-bezier(.16,1,.3,1)),background .2s var(--ease-out,cubic-bezier(.16,1,.3,1))}.ds-topnav a:hover{color:var(--cyan-hi,#bff3ff);background:var(--recess,#0e1830)}.ds-topnav a:focus-visible{outline:2px solid var(--cyan-hi,#bff3ff);outline-offset:3px}"
+    },
+    {
+      "name": "Readout Cell",
+      "kind": "card",
+      "refersTo": "readout-cell",
+      "description": "A recessed instrument readout: label row with indicator dot, segment clock, label/segment rows, status under a hairline.",
+      "html": "<div class=\"ds-readouts\"><div class=\"ds-readout\"><div class=\"ds-readout__title\"><span class=\"ds-label\">Some other home</span><span class=\"ds-dot ds-dot--off\" aria-hidden=\"true\"></span></div><span class=\"ds-seg ds-seg--7 is-blink\" aria-label=\"12:00, blinking\"><span class=\"ds-seg__ghost\" aria-hidden=\"true\">~~:~~</span><span class=\"ds-seg__lit\" aria-hidden=\"true\">12:00</span></span><dl class=\"ds-readout__rows\"><dt class=\"ds-label\">Lights</dt><dd><span class=\"ds-seg is-off\" aria-label=\"no reading\"><span class=\"ds-seg__ghost\" aria-hidden=\"true\">~~~~</span><span class=\"ds-seg__lit\" aria-hidden=\"true\">----</span></span></dd></dl><div class=\"ds-readout__status ds-label\">Waiting for the cloud</div></div><div class=\"ds-readout\"><div class=\"ds-readout__title\"><span class=\"ds-label\">Lantern home</span><span class=\"ds-dot\" aria-hidden=\"true\"></span></div><span class=\"ds-seg ds-seg--7\" aria-label=\"20:17\"><span class=\"ds-seg__ghost\" aria-hidden=\"true\">~~:~~</span><span class=\"ds-seg__lit\" aria-hidden=\"true\">20:17</span></span><dl class=\"ds-readout__rows\"><dt class=\"ds-label\">Lights</dt><dd><span class=\"ds-seg\" aria-label=\"ON\"><span class=\"ds-seg__ghost\" aria-hidden=\"true\">~~</span><span class=\"ds-seg__lit\" aria-hidden=\"true\">ON</span></span></dd></dl><div class=\"ds-readout__status ds-label\">Running locally</div></div></div>",
+      "css": ".ds-seg{position:relative;display:inline-block;font-family:var(--font-seg,'DSEG14',monospace);font-size:32px;line-height:1;letter-spacing:.04em;white-space:nowrap}.ds-seg__ghost{position:absolute;inset:0;color:var(--ghost,#163340);pointer-events:none;user-select:none}.ds-seg__lit{position:relative;color:var(--cyan,#5fd3f3);text-shadow:0 0 6px var(--cyan-glow,rgba(95,211,243,.55)),0 0 18px var(--cyan-glow-soft,rgba(95,211,243,.22));transition:color .4s var(--ease-out,cubic-bezier(.16,1,.3,1)),text-shadow .4s var(--ease-out,cubic-bezier(.16,1,.3,1))}.ds-seg.is-off .ds-seg__lit{color:#3f8ea6;text-shadow:none}.ds-seg.is-amber .ds-seg__lit{color:var(--amber,#f5a623);text-shadow:0 0 6px var(--amber-glow,rgba(245,166,35,.5)),0 0 20px rgba(245,166,35,.3)}.ds-seg.is-violet .ds-seg__lit{color:var(--violet,#b48cff);text-shadow:0 0 8px rgba(180,140,255,.45)}.ds-seg.is-blink .ds-seg__lit{animation:ds-seg-blink 1s steps(1,end) infinite}@keyframes ds-seg-blink{0%,64%{opacity:1}65%,100%{opacity:0}}@media (prefers-reduced-motion:reduce){.ds-seg.is-blink .ds-seg__lit{animation:none;opacity:.55}}.ds-seg--7{font-family:var(--font-seg7,'DSEG7',monospace)}.ds-seg--7 .ds-seg__ghost{color:var(--ghost-7,#12272f)}.ds-readouts{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line,#1c2c3c);border:1px solid var(--line,#1c2c3c);border-radius:4px;overflow:hidden}.ds-readout{background:var(--recess,#0e1830);padding:16px 18px 18px;display:flex;flex-direction:column;gap:10px;box-shadow:inset 0 2px 8px rgba(0,0,0,.5)}.ds-readout .ds-seg{font-size:40px}.ds-readout__title{display:flex;justify-content:space-between;align-items:center;gap:8px}.ds-readout__rows{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;align-items:center;margin:4px 0 0}.ds-readout__rows dt,.ds-readout__rows dd{margin:0}.ds-readout__rows dd{text-align:right}.ds-readout__rows .ds-seg{font-size:13px}.ds-readout__status{margin-top:auto;padding-top:10px;border-top:1px solid var(--line,#1c2c3c)}.ds-label{font-family:var(--font-mono,'Martian Mono',ui-monospace,Menlo,monospace);font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--text-2,#93b9c7);font-variant-numeric:tabular-nums}.ds-dot{width:10px;height:10px;border-radius:50%;background:var(--amber,#f5a623);box-shadow:0 0 10px var(--amber-glow,rgba(245,166,35,.5)),0 0 2px var(--amber,#f5a623);flex:none}.ds-dot--off{background:#1a2230;box-shadow:none}"
+    },
+    {
+      "name": "Display Window",
+      "kind": "card",
+      "refersTo": "display-window",
+      "description": "The bezelled panel that seats a display into the deck: 6px radius, top sheen, glass band, display-seat shadow.",
+      "html": "<section class=\"ds-display\"><span class=\"ds-seg\" aria-label=\"NOBODY NOTICED.\"><span class=\"ds-seg__ghost\" aria-hidden=\"true\">~~~~~~!~~~~~~~.</span><span class=\"ds-seg__lit\" aria-hidden=\"true\">NOBODY!NOTICED.</span></span><p class=\"ds-lead\"><strong>Lantern is a smart home that runs on hardware inside your house.</strong> Your home, your data, your rules.</p></section>",
+      "css": ".ds-seg{position:relative;display:inline-block;font-family:var(--font-seg,'DSEG14',monospace);font-size:32px;line-height:1;letter-spacing:.04em;white-space:nowrap}.ds-seg__ghost{position:absolute;inset:0;color:var(--ghost,#163340);pointer-events:none;user-select:none}.ds-seg__lit{position:relative;color:var(--cyan,#5fd3f3);text-shadow:0 0 6px var(--cyan-glow,rgba(95,211,243,.55)),0 0 18px var(--cyan-glow-soft,rgba(95,211,243,.22));transition:color .4s var(--ease-out,cubic-bezier(.16,1,.3,1)),text-shadow .4s var(--ease-out,cubic-bezier(.16,1,.3,1))}.ds-seg.is-off .ds-seg__lit{color:#3f8ea6;text-shadow:none}.ds-seg.is-amber .ds-seg__lit{color:var(--amber,#f5a623);text-shadow:0 0 6px var(--amber-glow,rgba(245,166,35,.5)),0 0 20px rgba(245,166,35,.3)}.ds-seg.is-violet .ds-seg__lit{color:var(--violet,#b48cff);text-shadow:0 0 8px rgba(180,140,255,.45)}.ds-seg.is-blink .ds-seg__lit{animation:ds-seg-blink 1s steps(1,end) infinite}@keyframes ds-seg-blink{0%,64%{opacity:1}65%,100%{opacity:0}}@media (prefers-reduced-motion:reduce){.ds-seg.is-blink .ds-seg__lit{animation:none;opacity:.55}}.ds-display{position:relative;border:1px solid var(--bezel,#1b2740);border-radius:6px;background:linear-gradient(180deg,rgba(255,255,255,.025),transparent 30%),var(--panel,#0b1322);box-shadow:0 20px 60px rgba(0,0,0,.55),0 2px 0 rgba(255,255,255,.03) inset,0 0 0 1px rgba(0,0,0,.6);padding:clamp(20px,3vw,40px)}.ds-display::before{content:'';position:absolute;inset:0;border-radius:inherit;background:linear-gradient(100deg,transparent 0%,rgba(95,211,243,.03) 35%,transparent 60%);pointer-events:none}.ds-display .ds-seg{font-size:clamp(26px,3.25vw,44px);letter-spacing:.06em}.ds-lead{margin:24px 0 0;max-width:48ch;font-family:var(--font-body,'Barlow','Helvetica Neue',Arial,sans-serif);font-size:clamp(18px,1.5vw,21px);line-height:1.5;color:var(--text,#dceff5)}.ds-lead strong{font-weight:600;color:#fff}"
+    },
+    {
+      "name": "Tooltip",
+      "kind": "custom",
+      "refersTo": "tooltip",
+      "description": "Part label on the stage: segment title, plain copy, protocol label, bezel-continuing pointer.",
+      "html": "<div class=\"ds-tooltip is-on\"><span class=\"ds-seg\" aria-label=\"RASPBERRY PI\"><span class=\"ds-seg__ghost\" aria-hidden=\"true\">~~~~~~~~~!~~</span><span class=\"ds-seg__lit\" aria-hidden=\"true\">RASPBERRY!PI</span></span><p>Runs Home Assistant. Every automation lives here, inside the house.</p><span class=\"ds-label\">Ethernet · Local</span></div>",
+      "css": ".ds-seg{position:relative;display:inline-block;font-family:var(--font-seg,'DSEG14',monospace);font-size:32px;line-height:1;letter-spacing:.04em;white-space:nowrap}.ds-seg__ghost{position:absolute;inset:0;color:var(--ghost,#163340);pointer-events:none;user-select:none}.ds-seg__lit{position:relative;color:var(--cyan,#5fd3f3);text-shadow:0 0 6px var(--cyan-glow,rgba(95,211,243,.55)),0 0 18px var(--cyan-glow-soft,rgba(95,211,243,.22));transition:color .4s var(--ease-out,cubic-bezier(.16,1,.3,1)),text-shadow .4s var(--ease-out,cubic-bezier(.16,1,.3,1))}.ds-seg.is-off .ds-seg__lit{color:#3f8ea6;text-shadow:none}.ds-seg.is-amber .ds-seg__lit{color:var(--amber,#f5a623);text-shadow:0 0 6px var(--amber-glow,rgba(245,166,35,.5)),0 0 20px rgba(245,166,35,.3)}.ds-seg.is-violet .ds-seg__lit{color:var(--violet,#b48cff);text-shadow:0 0 8px rgba(180,140,255,.45)}.ds-seg.is-blink .ds-seg__lit{animation:ds-seg-blink 1s steps(1,end) infinite}@keyframes ds-seg-blink{0%,64%{opacity:1}65%,100%{opacity:0}}@media (prefers-reduced-motion:reduce){.ds-seg.is-blink .ds-seg__lit{animation:none;opacity:.55}}.ds-tooltip{position:relative;display:inline-block;min-width:180px;max-width:240px;padding:10px 12px;background:rgba(11,19,34,.96);border:1px solid var(--dim,#2f6b7f);border-radius:3px;box-shadow:0 8px 24px rgba(0,0,0,.5);opacity:0;transition:opacity .15s var(--ease-out,cubic-bezier(.16,1,.3,1))}.ds-tooltip.is-on{opacity:1}.ds-tooltip::after{content:'';position:absolute;left:50%;bottom:-6px;width:10px;height:10px;background:inherit;border-right:1px solid var(--dim,#2f6b7f);border-bottom:1px solid var(--dim,#2f6b7f);transform:translateX(-50%) rotate(45deg)}.ds-tooltip .ds-seg{font-size:14px;display:block;margin-bottom:6px}.ds-tooltip p{margin:0;font-family:var(--font-body,'Barlow','Helvetica Neue',Arial,sans-serif);font-size:14px;line-height:1.4;color:var(--text,#dceff5)}.ds-tooltip .ds-label{display:block;margin-top:6px;font-family:var(--font-mono,'Martian Mono',ui-monospace,Menlo,monospace);font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--text-2,#93b9c7)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Display That Never Blinks 12:00",
+    "overview": "**Creative North Star: \"The Display That Never Blinks 12:00\"**\n\nLantern's page is the face of a vintage vacuum-fluorescent hi-fi deck. The whole surface is a dark bezelled instrument: a deep blue-black ground with recessed panels, 1px hairlines scored into the face, and a single kind of light, cyan phosphor, that reads as either lit or unlit. There is no middle state. Everything the page has to say about the product (works offline, nothing leaves the house, the light that holds) is said by lighting or not lighting a segment.\n\nDensity is instrument-panel density: generous section rhythm, but inside each display the readouts are tight, tabular and aligned. Ghost cells are always drawn beneath lit text, so absence is visible and designed rather than empty. Prose (Barlow) sits on the face at full contrast and does the explaining; silkscreen labels (Martian Mono, uppercase, letter-spaced) name the controls; the segment faces (DSEG14 / DSEG7) carry headlines, numbers and status. The build rejects the category's glowing-render hero, glass cards in threes, and kicker text above headings; it also carries no hard offset shadows and no decorative gradients beyond the top-of-page lamp bloom.",
+    "keyCharacteristics": [
+      "One light source: cyan phosphor on a blue-black face; everything else is recess, bezel or hairline.",
+      "Ghost cells under every segment display; unlit is a drawn state, never a blank.",
+      "Amber appears only where the house holds (the lantern); violet only where Thread traffic flows.",
+      "Three faces with fixed jobs: segments display, Barlow explains, Martian Mono labels.",
+      "Controls are physical deck keys: 1px bezel, 3px radius, a 2px drop that collapses on press.",
+      "Motion is segment swap, glyph-by-glyph print, or exponential ease-out; nothing bounces."
+    ],
+    "rules": [
+      {
+        "name": "The Amber Discipline Rule",
+        "body": "Amber means exactly one thing: the house keeps working. It lights the lantern dot, the lantern label, the amber key when the internet is cut, the HOUSE: ON readout, and the closing \"YOUR RULES.\" It is never a warning, never a highlight, never a second accent for emphasis. If a new surface does not contain the lantern moment, it does not contain amber.",
+        "section": "colors"
+      },
+      {
+        "name": "The Violet Is Thread Rule",
+        "body": "Violet is a protocol color, not an accent. It appears only on Thread traffic (packets, wires, legend, antenna). Wi-Fi and wired traffic are cyan; VPN is dashed bloom-cyan.",
+        "section": "colors"
+      },
+      {
+        "name": "The Lit-or-Unlit Rule",
+        "body": "There are three segment states and no fourth: lit (cyan with bloom), off (`off-segment`, no bloom) and ghost (the mask). Do not invent opacity-dimmed or desaturated cyan; use `.is-off` or let the ghost layer show.",
+        "section": "colors"
+      },
+      {
+        "name": "The Segment Strings Rule",
+        "body": "Segment displays carry uppercase strings of a few words, digits, colons and periods; never prose, never lowercase. Every segment element is built with the ghost layer (`~` under the lit text, `!` for spaces) and an `aria-label` carrying the plain string.",
+        "section": "typography"
+      },
+      {
+        "name": "The Silkscreen Rule",
+        "body": "Martian Mono is only ever small (11-12px) and tracked (0.10-0.14em). It never sets a heading and never grows past 12px.",
+        "section": "typography"
+      },
+      {
+        "name": "The Glow Is Light Rule",
+        "body": "A glow is only ever on something that is lit (segment, lit key, lantern). Nothing unlit glows, and glow color always matches the lit color.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Two-Pixel Travel Rule",
+        "body": "Deck keys sit 2px proud of the face and drop 2px when pressed or held; the drop shadow collapses to zero and an inset shadow appears. No scale, no lift on hover.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do build every segment display with the ghost layer underneath; an unlit cell is drawn in `ghost-14` / `ghost-7`, never left blank.",
+      "Do keep amber to the lantern moment (dot, label, amber key when cut, HOUSE: ON, YOUR RULES.) and violet to Thread traffic.",
+      "Do make every control a deck key: 1px `dim` bezel, 3px radius, 48px tall, 2px travel on press, lit gradient when active.",
+      "Do separate content with 1px `hairline` rules and hairline-gapped grids; recess readouts with `inset 0 2px 8px rgba(0,0,0,0.5)`.",
+      "Do use the one curve, `cubic-bezier(0.16, 1, 0.3, 1)`, at 0.15-0.4s for state transitions, stepped animation for blinks, and 26ms per glyph for printed lines.",
+      "Do honor reduced motion everywhere: no blink, no ticker, no orbit, no glyph printing, no packet motion; the colon holds, states snap, transitions collapse to 0.01ms.",
+      "Do keep every segment string in `data-text` with an `aria-label` and hide both visual layers from assistive tech.",
+      "Do use the focus ring `2px solid phosphor-cyan-hi` offset 3px (inset 2px on the canvas)."
+    ],
+    "donts": [
+      "Don't put a label, kicker or eyebrow above a Barlow heading; headings sit directly on the face.",
+      "Don't add a second accent, warning red, or any amber outside the lantern moment.",
+      "Don't flatten the ground to pure black or use a glowing-render hero, glass cards, or equal icon-card rows.",
+      "Don't use hard offset shadows, lifted hover states, scale effects or bounce easing; depth is seat, recess and 2px key travel only.",
+      "Don't set prose or lowercase text in DSEG, or let Martian Mono grow past 12px.",
+      "Don't dim cyan with opacity or desaturation; use `.is-off` or the ghost layer.",
+      "Don't ship a stage without the no-WebGL SVG fallback and keyboard orbit."
+    ]
+  }
+}
